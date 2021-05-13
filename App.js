@@ -18,9 +18,9 @@ export default function App() {
         drawerPosition='left'
         drawerType='slide'
       >
-        <Stack.Screen name="screen1" component={ScreenOne} />
-        <Stack.Screen name="screen2" component={ScreenTwo} />
-        <Stack.Screen name="screen3" component={ScreenThree} />
+        <Drawer.Screen name="screen1" component={ScreenOne} />
+        <Drawer.Screen name="screen2" component={ScreenTwo} />
+        <Drawer.Screen name="screen3" component={ScreenThree} />
 
       </Drawer.Navigator>
 
