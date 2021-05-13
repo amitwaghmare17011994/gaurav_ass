@@ -1,13 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { StyleSheet, Text, View } from 'react-native';
+import MyStack from './navigators';
+import ScreenTwo from './screens/ScreenTwo';
+import ScreenOne from './screens/ScreenOne';
+import ScreenThree from './screens/ScreenThree';
+
+const Drawer = createDrawerNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Drawer.Navigator
+        drawerPosition='left'
+        drawerType='slide'
+      >
+        <Stack.Screen name="screen1" component={ScreenOne} />
+        <Stack.Screen name="screen2" component={ScreenTwo} />
+        <Stack.Screen name="screen3" component={ScreenThree} />
+
+      </Drawer.Navigator>
+
+    </NavigationContainer>
   );
 }
 
